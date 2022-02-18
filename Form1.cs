@@ -11,6 +11,7 @@ using System.IO;
 
 namespace _3E_Laboratorio_2
 {
+    
     public partial class Form1 : Form
     {
         List<string> pag = new List<string>();
@@ -27,6 +28,7 @@ namespace _3E_Laboratorio_2
                 string texto = reader.ReadLine();
                 txt_combobox1.Items.Add(texto);
             }
+            
             reader.Close();
 
         }
@@ -34,6 +36,7 @@ namespace _3E_Laboratorio_2
             FileStream stream = new FileStream(F_name, FileMode.Append, FileAccess.Write);
             StreamWriter writer = new StreamWriter(stream);
             writer.WriteLine(txt);
+            
             writer.Close();
 
         }
@@ -52,7 +55,10 @@ namespace _3E_Laboratorio_2
         }
         private void button1_Enter(object sender, EventArgs e)
         {
+            
             string uri = "";
+          
+            
             if (txt_combobox1.Text != null)
                 uri = txt_combobox1.Text;
             else if (txt_combobox1.SelectedItem != null)

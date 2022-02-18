@@ -24,7 +24,8 @@
             this.haciaAdelanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txt_combobox1 = new System.Windows.Forms.ToolStripComboBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_ir = new System.Windows.Forms.Button();
+            this.btn_elim = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,7 @@
             this.txt_combobox1.BackColor = System.Drawing.Color.Silver;
             this.txt_combobox1.Name = "txt_combobox1";
             this.txt_combobox1.Size = new System.Drawing.Size(600, 28);
+            this.txt_combobox1.SelectedIndexChanged += new System.EventHandler(this.txt_combobox1_SelectedIndexChanged);
             // 
             // webBrowser1
             // 
@@ -79,24 +81,36 @@
             this.webBrowser1.Size = new System.Drawing.Size(1112, 828);
             this.webBrowser1.TabIndex = 3;
             // 
-            // button1
+            // btn_ir
             // 
-            this.button1.BackColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(922, -3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 35);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Ir";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Enter += new System.EventHandler(this.button1_Enter);
+            this.btn_ir.BackColor = System.Drawing.Color.Gainsboro;
+            this.btn_ir.Location = new System.Drawing.Point(922, -3);
+            this.btn_ir.Name = "btn_ir";
+            this.btn_ir.Size = new System.Drawing.Size(32, 35);
+            this.btn_ir.TabIndex = 1;
+            this.btn_ir.Text = "Ir";
+            this.btn_ir.UseVisualStyleBackColor = false;
+            this.btn_ir.Enter += new System.EventHandler(this.button1_Enter);
+            // 
+            // btn_elim
+            // 
+            this.btn_elim.BackColor = System.Drawing.Color.LightGray;
+            this.btn_elim.ForeColor = System.Drawing.Color.Black;
+            this.btn_elim.Location = new System.Drawing.Point(960, 0);
+            this.btn_elim.Name = "btn_elim";
+            this.btn_elim.Size = new System.Drawing.Size(73, 36);
+            this.btn_elim.TabIndex = 4;
+            this.btn_elim.Text = "Eliminar";
+            this.btn_elim.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1112, 860);
+            this.Controls.Add(this.btn_elim);
             this.Controls.Add(this.webBrowser1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_ir);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -118,7 +132,8 @@
         private System.Windows.Forms.ToolStripMenuItem haciaAtrasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem haciaAdelanteToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox txt_combobox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_ir;
+        private System.Windows.Forms.Button btn_elim;
     }
 }
 
