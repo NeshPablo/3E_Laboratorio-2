@@ -62,7 +62,22 @@ namespace _3E_Laboratorio_2
             if (!uri.Contains("https://"))
                 uri = "https://" + uri;
             webBrowser1.Navigate(new Uri(uri));
-            Guardar("Uri.txt", uri);
+            int listo=0;
+            for (int i = 0; i < txt_combobox1.Items.Count; i++)
+            {
+                if(uri == txt_combobox1.Items[i].ToString())
+                    listo++;
+            }
+            if (listo == 0)
+            {
+                txt_combobox1.Items.Add(uri);
+                Guardar("Uri.txt", uri);
+            }
+        }
+
+        private void txt_combobox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate(txt_combobox1.SelectedItem.ToString());
         }
     }
 }

@@ -68,6 +68,7 @@
             this.txt_combobox1.BackColor = System.Drawing.Color.Silver;
             this.txt_combobox1.Name = "txt_combobox1";
             this.txt_combobox1.Size = new System.Drawing.Size(600, 28);
+            this.txt_combobox1.SelectedIndexChanged += new System.EventHandler(this.txt_combobox1_SelectedIndexChanged);
             // 
             // webBrowser1
             // 
